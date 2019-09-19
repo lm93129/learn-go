@@ -3,7 +3,7 @@ package HelloWorld
 const (
 	helloPrefix        = "Hello, "
 	spanishHelloPrefix = "Hola, "
-	frenchHelloPrefix  = "Salut, "
+	frenchHelloPrefix  = "Bonjour, "
 )
 
 //Switch的使用

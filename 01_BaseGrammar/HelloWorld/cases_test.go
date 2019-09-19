@@ -13,7 +13,7 @@ var HelloCases = []struct {
 	{
 		"yang",
 		"french",
-		"Salut, yang",
+		"Bonjour, yang",
 	},
 	{
 		"li",
