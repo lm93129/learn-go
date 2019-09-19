@@ -1,5 +1,6 @@
 package datetype
 
+//构造测试用的数据
 var AddIntCases = []struct {
 	x    int
 	y    int
