@@ -26,7 +26,7 @@ func AddFloat(x, y float32) float32 {
 }
 
 func TypeBool() bool {
-	e := "World" // 使用:=只能在函数内使用
+	e := "World" // 使用:=的方式声明变量只能在函数内使用
 	fmt.Println(a, b, d, c, e)
 	return true
 }
