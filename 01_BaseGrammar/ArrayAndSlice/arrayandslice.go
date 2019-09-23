@@ -32,7 +32,7 @@ func SumSlice(number ...[]int) (sums []int) {
 
 func SumEmptySlice(number ...[]int) (sums []int) {
 	for _, numbers := range number {
-		if len(numbers) == 0 {
+		if len(numbers) == 0 { //使用len可以获取长度
 			sums = append(sums, 0)
 		} else {
 			tail := numbers[1:] //截取部分切片，取到从索引 1 到最后一个元素

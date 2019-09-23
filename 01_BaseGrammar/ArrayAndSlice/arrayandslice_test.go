@@ -45,3 +45,9 @@ func TestSumSlice(t *testing.T) {
 		checkSums(t, got, want)
 	})
 }
+
+func BenchmarkSumSlice(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		SumSlice([]int{1, 2, 3, 4, 5}, []int{1, 3, 4, 5})
+	}
+}
