@@ -16,3 +16,17 @@ var SumsCase = []struct {
 		[]int{7, 8},
 	},
 }
+
+var RecordCase = []struct {
+	Record string
+	want   bool
+}{
+	{
+		"PPALLL",
+		false,
+	},
+	{
+		"PPALLP",
+		true,
+	},
+}
