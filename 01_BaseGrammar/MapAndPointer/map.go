@@ -10,10 +10,7 @@ func Search(dictionary map[string]string, word string) string {
 //判断单词是否存在字典中
 func UnkownWord(dictionary map[string]string, word string) bool {
 	_, ok := dictionary[word]
-	if !ok {
-		return false
-	}
-	return true
+	return !ok
 }
 
 //map 是引用类型不需要使用指针就可以直接修改
