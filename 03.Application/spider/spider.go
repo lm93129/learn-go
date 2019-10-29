@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-//输入关键字获取百度企业信用PID
+// 输入关键字获取百度企业信用PID
 func GetEnterpriseList(keyword string) [][][]byte {
 	client := &http.Client{Timeout: 20 * time.Second}
 	req, _ := http.NewRequest("GET", fmt.Sprintf("https://xin.baidu.com/s?q=%s&t=1", keyword), nil)
@@ -31,7 +31,7 @@ func GetEnterpriseList(keyword string) [][][]byte {
 	return matches
 }
 
-//通过PID获取企业信息JSON
+// 通过PID获取企业信息JSON
 func GetEnterpriseInfo(pid string) []byte {
 	resp, err := http.Get(fmt.Sprintf("https://xin.baidu.com/detail/basicAjax?pid=%s", pid))
 	if err != nil {
