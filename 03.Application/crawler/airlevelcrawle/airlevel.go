@@ -44,10 +44,13 @@ func GetCity() map[string]string {
 }
 
 func GetAirLevel(m map[string]string) {
-
+	list := GetCity()
+	for a, _ := range list {
+		CityAir(a)
+	}
 }
 
-func CityAir(city string) (cityinfos []AirLevel) {
+func CityAir(city string) (CityAirLevels []CityAirLevel) {
 	req, _ := http.NewRequest("GET", fmt.Sprintf("http://air-level.com/air/%s", city), nil)
 	// 自定义Header
 	req.Header.Set("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)")
@@ -66,24 +69,24 @@ func CityAir(city string) (cityinfos []AirLevel) {
 	}
 
 	doc.Find("table").Find("tr").Each(func(i int, ele *goquery.Selection) {
-
-		cityinfo := AirLevel{
+		cityairleve := CityAirLevel{
 			Addr:  ele.Find("td").Eq(0).Text(),
 			Aqi:   ele.Find("td").Eq(1).Text(),
 			Level: ele.Find("td").Eq(2).Text(),
 			Pm25:  ele.Find("td").Eq(3).Text(),
 			Pm10:  ele.Find("td").Eq(4).Text(),
 		}
-		cityinfos = append(cityinfos, cityinfo)
+		CityAirLevels = append(CityAirLevels, cityairleve)
 	})
 
-	return cityinfos
+	// 删除第一个空元素
+	return CityAirLevels[1:]
 }
 
-type AirLevel struct {
-	Addr  string
-	Aqi   string
-	Level string
-	Pm25  string
-	Pm10  string
+type CityAirLevel struct {
+	Addr  string `json:"addr"`
+	Aqi   string `json:"aqi"`
+	Level string `json:"level"`
+	Pm25  string `json:"pm_25"`
+	Pm10  string `json:"pm_10"`
 }

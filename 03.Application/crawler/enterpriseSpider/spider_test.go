@@ -1,9 +1,10 @@
-package spider
+package enterpriseSpider
 
 import (
 	"fmt"
-	"github.com/tidwall/gjson" //获取json内容
 	"testing"
+
+	"github.com/tidwall/gjson" //获取json内容
 )
 
 func TestGetEnterprise(t *testing.T) {
