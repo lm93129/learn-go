@@ -14,15 +14,15 @@ var client = &http.Client{Timeout: 20 * time.Second}
 func KuaiProxy(num string) (Proxylist []ProxyList) {
 	req, _ := http.NewRequest("GET", fmt.Sprintf("https://www.kuaidaili.com/free/inha/%s", num), nil)
 	// 自定义Header
-	req.Header.Set("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)")
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36")
 	resp, err := client.Do(req)
 	if err != nil {
-		panic(err)
+		log.Fatalln(err)
 	}
 
 	defer resp.Body.Close()
 	if resp.StatusCode != http.StatusOK {
-		log.Fatalf("status code error: %d %s", resp.StatusCode, resp.Status)
+		log.Fatalf("status code error: %d %s\n", resp.StatusCode, resp.Status)
 	}
 	doc, err := goquery.NewDocumentFromReader(resp.Body)
 	if err != nil {

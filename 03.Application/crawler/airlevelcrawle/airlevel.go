@@ -53,7 +53,7 @@ func GetAirLevel(m map[string]string) {
 func CityAir(city string) (CityAirLevels []CityAirLevel) {
 	req, _ := http.NewRequest("GET", fmt.Sprintf("http://air-level.com/air/%s", city), nil)
 	// 自定义Header
-	req.Header.Set("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)")
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36")
 	resp, err := client.Do(req)
 	if err != nil {
 		panic(err)
