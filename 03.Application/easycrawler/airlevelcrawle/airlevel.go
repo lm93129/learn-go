@@ -78,7 +78,9 @@ func CityAir(city string) (CityAirLevels []CityAirLevel) {
 		}
 		CityAirLevels = append(CityAirLevels, cityairleve)
 	})
-
+	if len(CityAirLevels) == 0 {
+		return CityAirLevels
+	}
 	// 删除第一个空元素
 	return CityAirLevels[1:]
 }

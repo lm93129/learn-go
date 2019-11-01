@@ -21,6 +21,7 @@ func KuaiProxy(num string) (Proxylist []ProxyList) {
 	}
 
 	defer resp.Body.Close()
+
 	if resp.StatusCode != http.StatusOK {
 		log.Fatalf("status code error: %d %s\n", resp.StatusCode, resp.Status)
 	}
@@ -29,6 +30,7 @@ func KuaiProxy(num string) (Proxylist []ProxyList) {
 		log.Fatalln(err)
 	}
 
+	// 使用GoQuery
 	doc.Find("tr").Each(func(i int, ele *goquery.Selection) {
 		proxy := ProxyList{
 			Ip:    ele.Find("td").Eq(0).Text(),
@@ -37,7 +39,10 @@ func KuaiProxy(num string) (Proxylist []ProxyList) {
 		}
 		Proxylist = append(Proxylist, proxy)
 	})
-
+	// 如果数组为空则直接返回空数组避免错误
+	if len(Proxylist) == 0 {
+		return Proxylist
+	}
 	// 删除第一个空元素
 	return Proxylist[1:]
 }

@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全国空气质量指数查询 - PM2.5实时地图、空气污染排名 - 空气知音</title>
+    <script src="js/mdevice.js" type="text/javascript"></script>
+    <script type="text/javascript">mdevice("http://m.air-level.com");</script>
+    <meta name="keywords" content="空气质量,PM2.5,AQI" />
+    <meta name="description" content="全国空气质量指数网(Air Level 空气知音)提供精准的PM2.5实时数据查询，全国空气质量地图及全国重点城市空气质量指数(AQI)排名" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.air-level.com/favicon.ico" />
+    <link href="/Content/css?v=pTFCPUJfE7YQTuDzZ6su5A5WyYYsHJ5ECHxWvEWw_rs1" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <a href="/" title="全国空气质量AirLevel">
+            <img src="/Image/logo.png" alt="空气知音AirLevel">
+        </a>
+    </div>
+
+
+    <div class="container menu">
+        <ul class="nav nav-tabs navbar-right" role="tablist">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="/rank">空气质量排行榜</a></li>
+        </ul>
+    </div>
+    <div class="row page">
+        <div class="col-md-8">
+            <div class="text-center">
+                <h2>全国空气质量指数(AQI) PM2.5实时地图</h2>
+                <h4>更新时间 2019-10-31 15:00</h4>
+                <img src="http://res.air-level.com/map/china/2019/10/aqi-2019-10-31-15_p1_66e49ea9-eb77-4daf-8e48-2521dd07bc40.png" class="img-thumbnail" alt="全国空气质量指数地图">
+                <p>说明：全国各城市空气质量及PM2.5实时数据来自于中国环保部，每小时更新</p>
+            </div>
+            <div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- AirLevel_index_pc_auto -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-3496314023280857"
+                     data-ad-slot="4744470121"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div id="citylist">
+                <div class="citynum">重点城市：</div>
+                <div class="citynames">
+                    <a href="/air/beijing/">北京</a>
+                    <a href="/air/shanghai/">上海</a>
+                    <a href="/air/tianjin/">天津</a>
+                    <a href="/air/chongqing/">重庆</a>
+                    <a href="/air/guangzhou/">广州</a>
+                    <a href="/air/nanjing/">南京</a>
+                    <a href="/air/hangzhou/">杭州</a>
+                </div>
+                <div class="citynum">A.</div>
+                <div class="citynames">
+                    <a href="/air/anshan/">鞍山</a>
+                    <a href="/air/anqing/">安庆</a>
+                    <a href="/air/anshun/">安顺</a>
+                    <a href="/air/anyang/">安阳</a>
+                    <a href="/air/ankang/">安康</a>
+                    <a href="/air/abazhou/">阿坝州</a>
+                    <a href="/air/akesudiqu/">阿克苏地区</a>
+                    <a href="/air/alashanmeng/">阿拉善盟</a>
+                    <a href="/air/aletaidiqu/">阿勒泰地区</a>
+                    <a href="/air/alidiqu/">阿里地区</a>
+                </div>
+                <div class="citynum">B.</div>
+                <div class="citynames">
+                    <a href="/air/beijing/">北京</a>
+                    <a href="/air/baoji/">宝鸡</a>
+                    <a href="/air/baotou/">包头</a>
+                    <a href="/air/baoding/">保定</a>
+                    <a href="/air/baicheng/">白城</a>
+                    <a href="/air/bangbu/">蚌埠</a>
+                    <a href="/air/benxi/">本溪</a>
+                    <a href="/air/baishan/">白山</a>
+                    <a href="/air/baiyin/">白银</a>
+                    <a href="/air/bozhou/">亳州</a>
+                    <a href="/air/baoshan/">保山</a>
+                    <a href="/air/bazhong/">巴中</a>
+                    <a href="/air/beihai/">北海</a>
+                    <a href="/air/bijie/">毕节</a>
+                    <a href="/air/binzhou/">滨州</a>
+                    <a href="/air/baise/">百色</a>
+                    <a href="/air/boertala/">博州</a>
+                    <a href="/air/bayannaoer/">巴彦淖尔</a>
+                </div>
+                <div class="citynum">C.</div>
+                <div class="citynames">
+                    <a href="/air/chongqing/">重庆</a>
+                    <a href="/air/chengdu/">成都</a>
+                    <a href="/air/changchun/">长春</a>
+                    <a href="/air/chengde/">承德</a>
+                    <a href="/air/cangzhou/">沧州</a>
+                    <a href="/air/chifeng/">赤峰</a>
+                    <a href="/air/changzhou/">常州</a>
+                    <a href="/air/changde/">常德</a>
+                    <a href="/air/changsha/">长沙</a>
+                    <a href="/air/changshu/">常熟</a>
+                    <a href="/air/changzhi/">长治</a>
+                    <a href="/air/chaoyang/">朝阳</a>
+                    <a href="/air/chaozhou/">潮州</a>
+                    <a href="/air/chenzhou/">郴州</a>
+                    <a href="/air/chizhou/">池州</a>
+                    <a href="/air/chongzuo/">崇左</a>
+                    <a href="/air/chuzhou/">滁州</a>
+                    <a href="/air/changjizhou/">昌吉州</a>
+                    <a href="/air/chuxiongzhou/">楚雄州</a>
+                    <a href="/air/changdu/">昌都</a>
+                </div>
+                <div class="citynum">D.</div>
+                <div class="citynames">
+                    <a href="/air/dalian/">大连</a>
+                    <a href="/air/datong/">大同</a>
+                    <a href="/air/dongguan/">东莞</a>
+                    <a href="/air/dandong/">丹东</a>
+                    <a href="/air/dezhou/">德州</a>
+                    <a href="/air/dongying/">东营</a>
+                    <a href="/air/daqing/">大庆</a>
+                    <a href="/air/dalizhou/">大理州</a>
+                    <a href="/air/daxinganlingdiqu/">大兴安岭地区</a>
+                    <a href="/air/dazhou/">达州</a>
+                    <a href="/air/dehongzhou/">德宏州</a>
+                    <a href="/air/deyang/">德阳</a>
+                    <a href="/air/dingxi/">定西</a>
+                    <a href="/air/diqingzhou/">迪庆州</a>
+                </div>
+                <div class="citynum">E.</div>
+                <div class="citynames">
+                    <a href="/air/eerduosi/">鄂尔多斯</a>
+                    <a href="/air/ezhou/">鄂州</a>
+                    <a href="/air/enshizhou/">恩施州</a>
+                </div>
+                <div class="citynum">F.</div>
+                <div class="citynames">
+                    <a href="/air/fuzhou/">福州</a>
+                    <a href="/air/fushun/">抚顺</a>
+                    <a href="/air/fuyang/">阜阳</a>
+                    <a href="/air/fuyangshi/">富阳</a>
+                    <a href="/air/foshan/">佛山</a>
+                    <a href="/air/fuxin/">阜新</a>
+                    <a href="/air/fuzhoushi/">抚州</a>
+                    <a href="/air/fangchenggang/">防城港</a>
+                </div>
+                <div class="citynum">G.</div>
+                <div class="citynames">
+                    <a href="/air/guangzhou/">广州</a>
+                    <a href="/air/guangan/">广安</a>
+                    <a href="/air/guangyuan/">广元</a>
+                    <a href="/air/guilin/">桂林</a>
+                    <a href="/air/guiyang/">贵阳</a>
+                    <a href="/air/ganzhou/">赣州</a>
+                    <a href="/air/guigang/">贵港</a>
+                    <a href="/air/guyuan/">固原</a>
+                    <a href="/air/ganzizhou/">甘孜州</a>
+                    <a href="/air/gannanzhou/">甘南州</a>
+                    <a href="/air/guoluozhou/">果洛州</a>
+                </div>
+                <div class="citynum">H.</div>
+                <div class="citynames">
+                    <a href="/air/hangzhou/">杭州</a>
+                    <a href="/air/haerbin/">哈尔滨</a>
+                    <a href="/air/hefei/">合肥</a>
+                    <a href="/air/huhehaote/">呼和浩特</a>
+                    <a href="/air/haikou/">海口</a>
+                    <a href="/air/handan/">邯郸</a>
+                    <a href="/air/hengshui/">衡水</a>
+                    <a href="/air/haimen/">海门</a>
+                    <a href="/air/haibeizhou/">海北州</a>
+                    <a href="/air/haidongdiqu/">海东地区</a>
+                    <a href="/air/hainanzhou/">海南州</a>
+                    <a href="/air/haixizhou/">海西州</a>
+                    <a href="/air/hamidiqu/">哈密地区</a>
+                    <a href="/air/hanzhong/">汉中</a>
+                    <a href="/air/hebi/">鹤壁</a>
+                    <a href="/air/hechi/">河池</a>
+                    <a href="/air/hegang/">鹤岗</a>
+                    <a href="/air/heihe/">黑河</a>
+                    <a href="/air/huzhou/">湖州</a>
+                    <a href="/air/hengyang/">衡阳</a>
+                    <a href="/air/hetiandiqu/">和田地区</a>
+                    <a href="/air/heyuan/">河源</a>
+                    <a href="/air/heze/">菏泽</a>
+                    <a href="/air/hezhou/">贺州</a>
+                    <a href="/air/honghezhou/">红河州</a>
+                    <a href="/air/huaian/">淮安</a>
+                    <a href="/air/huaibei/">淮北</a>
+                    <a href="/air/huaihua/">怀化</a>
+                    <a href="/air/huainan/">淮南</a>
+                    <a href="/air/huangshan/">黄山</a>
+                    <a href="/air/huanggang/">黄冈</a>
+                    <a href="/air/huangnanzhou/">黄南州</a>
+                    <a href="/air/huangshi/">黄石</a>
+                    <a href="/air/huizhou/">惠州</a>
+                    <a href="/air/huludao/">葫芦岛</a>
+                    <a href="/air/hulunbeier/">呼伦贝尔</a>
+                </div>
+                <div class="citynum">J.</div>
+                <div class="citynames">
+                    <a href="/air/jilin/">吉林</a>
+                    <a href="/air/jinan/">济南</a>
+                    <a href="/air/jining/">济宁</a>
+                    <a href="/air/jinzhou/">锦州</a>
+                    <a href="/air/jiamusi/">佳木斯</a>
+                    <a href="/air/jian/">吉安</a>
+                    <a href="/air/jiangmen/">江门</a>
+                    <a href="/air/jiangyin/">江阴</a>
+                    <a href="/air/jiaonan/">胶南</a>
+                    <a href="/air/jiaozhou/">胶州</a>
+                    <a href="/air/jiaozuo/">焦作</a>
+                    <a href="/air/jiaxing/">嘉兴</a>
+                    <a href="/air/jiayuguan/">嘉峪关</a>
+                    <a href="/air/jieyang/">揭阳</a>
+                    <a href="/air/jimo/">即墨</a>
+                    <a href="/air/jinchang/">金昌</a>
+                    <a href="/air/jincheng/">晋城</a>
+                    <a href="/air/jingdezhen/">景德镇</a>
+                    <a href="/air/jingmen/">荆门</a>
+                    <a href="/air/jingzhou/">荆州</a>
+                    <a href="/air/jinhua/">金华</a>
+                    <a href="/air/jintan/">金坛</a>
+                    <a href="/air/jinzhong/">晋中</a>
+                    <a href="/air/jiujiang/">九江</a>
+                    <a href="/air/jiuquan/">酒泉</a>
+                    <a href="/air/jixi/">鸡西</a>
+                    <a href="/air/jurong/">句容</a>
+                </div>
+                <div class="citynum">K.</div>
+                <div class="citynames">
+                    <a href="/air/kunming/">昆明</a>
+                    <a href="/air/kunshan/">昆山</a>
+                    <a href="/air/kaifeng/">开封</a>
+                    <a href="/air/kuerle/">库尔勒</a>
+                    <a href="/air/kezhou/">克州</a>
+                    <a href="/air/kashidiqu/">喀什地区</a>
+                    <a href="/air/kelamayi/">克拉玛依</a>
+                    <a href="/air/kezilesuzhou/">克孜勒苏州</a>
+                </div>
+                <div class="citynum">L.</div>
+                <div class="citynames">
+                    <a href="/air/luoyang/">洛阳</a>
+                    <a href="/air/lasa/">拉萨</a>
+                    <a href="/air/lianyungang/">连云港</a>
+                    <a href="/air/langfang/">廊坊</a>
+                    <a href="/air/laibin/">来宾</a>
+                    <a href="/air/laiwu/">莱芜</a>
+                    <a href="/air/laixi/">莱西</a>
+                    <a href="/air/laizhou/">莱州</a>
+                    <a href="/air/lanzhou/">兰州</a>
+                    <a href="/air/leshan/">乐山</a>
+                    <a href="/air/liangshanzhou/">凉山州</a>
+                    <a href="/air/liaocheng/">聊城</a>
+                    <a href="/air/liaoyang/">辽阳</a>
+                    <a href="/air/liaoyuan/">辽源</a>
+                    <a href="/air/lijiang/">丽江</a>
+                    <a href="/air/linan/">临安</a>
+                    <a href="/air/lincang/">临沧</a>
+                    <a href="/air/linfen/">临汾</a>
+                    <a href="/air/linyi/">临沂</a>
+                    <a href="/air/lishui/">丽水</a>
+                    <a href="/air/liuan/">六安</a>
+                    <a href="/air/liupanshui/">六盘水</a>
+                    <a href="/air/liuzhou/">柳州</a>
+                    <a href="/air/liyang/">溧阳</a>
+                    <a href="/air/longnan/">陇南</a>
+                    <a href="/air/longyan/">龙岩</a>
+                    <a href="/air/loudi/">娄底</a>
+                    <a href="/air/luohe/">漯河</a>
+                    <a href="/air/luzhou/">泸州</a>
+                    <a href="/air/lvliang/">吕梁</a>
+                    <a href="/air/linxiazhou/">临夏州</a>
+                    <a href="/air/linzhi/">林芝</a>
+                </div>
+                <div class="citynum">M.</div>
+                <div class="citynames">
+                    <a href="/air/maanshan/">马鞍山</a>
+                    <a href="/air/maoming/">茂名</a>
+                    <a href="/air/meishan/">眉山</a>
+                    <a href="/air/meizhou/">梅州</a>
+                    <a href="/air/mianyang/">绵阳</a>
+                    <a href="/air/mudanjiang/">牡丹江</a>
+                </div>
+                <div class="citynum">N.</div>
+                <div class="citynames">
+                    <a href="/air/nanjing/">南京</a>
+                    <a href="/air/nanchang/">南昌</a>
+                    <a href="/air/nanning/">南宁</a>
+                    <a href="/air/nanchong/">南充</a>
+                    <a href="/air/nanping/">南平</a>
+                    <a href="/air/nantong/">南通</a>
+                    <a href="/air/nanyang/">南阳</a>
+                    <a href="/air/ningbo/">宁波</a>
+                    <a href="/air/ningde/">宁德</a>
+                    <a href="/air/neijiang/">内江</a>
+                    <a href="/air/naqudiqu/">那曲</a>
+                    <a href="/air/nujiangzhou/">怒江州</a>
+                </div>
+                <div class="citynum">P.</div>
+                <div class="citynames">
+                    <a href="/air/panjin/">盘锦</a>
+                    <a href="/air/penglai/">蓬莱</a>
+                    <a href="/air/pingdu/">平度</a>
+                    <a href="/air/pingliang/">平凉</a>
+                    <a href="/air/pingxiang/">萍乡</a>
+                    <a href="/air/puer/">普洱</a>
+                    <a href="/air/putian/">莆田</a>
+                    <a href="/air/puyang/">濮阳</a>
+                    <a href="/air/panzhihua/">攀枝花</a>
+                    <a href="/air/pingdingshan/">平顶山</a>
+                </div>
+                <div class="citynum">Q.</div>
+                <div class="citynames">
+                    <a href="/air/qingdao/">青岛</a>
+                    <a href="/air/qingyang/">庆阳</a>
+                    <a href="/air/qingyuan/">清远</a>
+                    <a href="/air/qinhuangdao/">秦皇岛</a>
+                    <a href="/air/qinzhou/">钦州</a>
+                    <a href="/air/qiqihaer/">齐齐哈尔</a>
+                    <a href="/air/qitaihe/">七台河</a>
+                    <a href="/air/quanzhou/">泉州</a>
+                    <a href="/air/qujing/">曲靖</a>
+                    <a href="/air/quzhou/">衢州</a>
+                    <a href="/air/qiandongnanzhou/">黔东南州</a>
+                    <a href="/air/qiannanzhou/">黔南州</a>
+                    <a href="/air/qianxinanzhou/">黔西南州</a>
+                </div>
+                <div class="citynum">R.</div>
+                <div class="citynames">
+                    <a href="/air/rizhao/">日照</a>
+                    <a href="/air/rongcheng/">荣成</a>
+                    <a href="/air/rushan/">乳山</a>
+                    <a href="/air/rikaze/">日喀则</a>
+                </div>
+                <div class="citynum">S.</div>
+                <div class="citynames">
+                    <a href="/air/shanghai/">上海</a>
+                    <a href="/air/shenyang/">沈阳</a>
+                    <a href="/air/shenzhen/">深圳</a>
+                    <a href="/air/suzhou/">苏州</a>
+                    <a href="/air/shijiazhuang/">石家庄</a>
+                    <a href="/air/sanya/">三亚</a>
+                    <a href="/air/sanmenxia/">三门峡</a>
+                    <a href="/air/sanming/">三明</a>
+                    <a href="/air/shangluo/">商洛</a>
+                    <a href="/air/shangqiu/">商丘</a>
+                    <a href="/air/shangrao/">上饶</a>
+                    <a href="/air/shannan/">山南</a>
+                    <a href="/air/shantou/">汕头</a>
+                    <a href="/air/shanwei/">汕尾</a>
+                    <a href="/air/shaoguan/">韶关</a>
+                    <a href="/air/shaoxing/">绍兴</a>
+                    <a href="/air/shaoyang/">邵阳</a>
+                    <a href="/air/shihezi/">石河子</a>
+                    <a href="/air/shiyan/">十堰</a>
+                    <a href="/air/shizuishan/">石嘴山</a>
+                    <a href="/air/shouguang/">寿光</a>
+                    <a href="/air/shuangyashan/">双鸭山</a>
+                    <a href="/air/shuozhou/">朔州</a>
+                    <a href="/air/simao/">思茅</a>
+                    <a href="/air/siping/">四平</a>
+                    <a href="/air/songyuan/">松原</a>
+                    <a href="/air/suihua/">绥化</a>
+                    <a href="/air/suining/">遂宁</a>
+                    <a href="/air/suizhou/">随州</a>
+                    <a href="/air/suqian/">宿迁</a>
+                    <a href="/air/suzhoushi/">宿州</a>
+                </div>
+                <div class="citynum">T.</div>
+                <div class="citynames">
+                    <a href="/air/tianjin/">天津</a>
+                    <a href="/air/taiyuan/">太原</a>
+                    <a href="/air/tangshan/">唐山</a>
+                    <a href="/air/taian/">泰安</a>
+                    <a href="/air/taizhou/">台州</a>
+                    <a href="/air/taizhoushi/">泰州</a>
+                    <a href="/air/tianshui/">天水</a>
+                    <a href="/air/tieling/">铁岭</a>
+                    <a href="/air/tongchuan/">铜川</a>
+                    <a href="/air/tonghua/">通化</a>
+                    <a href="/air/taicang/">太仓</a>
+                    <a href="/air/tongliao/">通辽</a>
+                    <a href="/air/tongling/">铜陵</a>
+                    <a href="/air/tongrendiqu/">铜仁地区</a>
+                    <a href="/air/tachengdiqu/">塔城地区</a>
+                    <a href="/air/tulufandiqu/">吐鲁番地区</a>
+                </div>
+                <div class="citynum">W.</div>
+                <div class="citynames">
+                    <a href="/air/wulumuqi/">乌鲁木齐</a>
+                    <a href="/air/wuxi/">无锡</a>
+                    <a href="/air/wenzhou/">温州</a>
+                    <a href="/air/weihai/">威海</a>
+                    <a href="/air/weifang/">潍坊</a>
+                    <a href="/air/weinan/">渭南</a>
+                    <a href="/air/wendeng/">文登</a>
+                    <a href="/air/wuhai/">乌海</a>
+                    <a href="/air/wuhan/">武汉</a>
+                    <a href="/air/wuhu/">芜湖</a>
+                    <a href="/air/wujiang/">吴江</a>
+                    <a href="/air/wuwei/">武威</a>
+                    <a href="/air/wuzhong/">吴忠</a>
+                    <a href="/air/wuzhou/">梧州</a>
+                    <a href="/air/wujiaqu/">五家渠</a>
+                    <a href="/air/wenshanzhou/">文山州</a>
+                    <a href="/air/wafangdian/">瓦房店</a>
+                    <a href="/air/wulanchabu/">乌兰察布</a>
+                </div>
+                <div class="citynum">X.</div>
+                <div class="citynames">
+                    <a href="/air/xian/">西安</a>
+                    <a href="/air/xiamen/">厦门</a>
+                    <a href="/air/xianyang/">咸阳</a>
+                    <a href="/air/xining/">西宁</a>
+                    <a href="/air/xingtai/">邢台</a>
+                    <a href="/air/xuchang/">许昌</a>
+                    <a href="/air/xuzhou/">徐州</a>
+                    <a href="/air/xiangtan/">湘潭</a>
+                    <a href="/air/xiangfan/">襄樊</a>
+                    <a href="/air/xiangyang/">襄阳</a>
+                    <a href="/air/xianning/">咸宁</a>
+                    <a href="/air/xiaogan/">孝感</a>
+                    <a href="/air/xinxiang/">新乡</a>
+                    <a href="/air/xinyang/">信阳</a>
+                    <a href="/air/xinyu/">新余</a>
+                    <a href="/air/xinzhou/">忻州</a>
+                    <a href="/air/xuancheng/">宣城</a>
+                    <a href="/air/xiangxizhou/">湘西州</a>
+                    <a href="/air/xinganmeng/">兴安盟</a>
+                    <a href="/air/xishuangbannazhou/">西双版纳州</a>
+                    <a href="/air/xilinguolemeng/">锡林郭勒盟</a>
+                </div>
+                <div class="citynum">Y.</div>
+                <div class="citynames">
+                    <a href="/air/yinchuan/">银川</a>
+                    <a href="/air/yaan/">雅安</a>
+                    <a href="/air/yanan/">延安</a>
+                    <a href="/air/yantai/">烟台</a>
+                    <a href="/air/yixing/">宜兴</a>
+                    <a href="/air/yancheng/">盐城</a>
+                    <a href="/air/yangjiang/">阳江</a>
+                    <a href="/air/yangquan/">阳泉</a>
+                    <a href="/air/yangzhou/">扬州</a>
+                    <a href="/air/yiwu/">义乌</a>
+                    <a href="/air/yibin/">宜宾</a>
+                    <a href="/air/yichang/">宜昌</a>
+                    <a href="/air/yichun/">宜春</a>
+                    <a href="/air/yichunshi/">伊春</a>
+                    <a href="/air/yingkou/">营口</a>
+                    <a href="/air/yingtan/">鹰潭</a>
+                    <a href="/air/yiyang/">益阳</a>
+                    <a href="/air/yongzhou/">永州</a>
+                    <a href="/air/yueyang/">岳阳</a>
+                    <a href="/air/yulin/">玉林</a>
+                    <a href="/air/yulinshi/">榆林</a>
+                    <a href="/air/yuncheng/">运城</a>
+                    <a href="/air/yunfu/">云浮</a>
+                    <a href="/air/yuxi/">玉溪</a>
+                    <a href="/air/yanbianzhou/">延边州</a>
+                    <a href="/air/yushuzhou/">玉树州</a>
+                    <a href="/air/yilihasake/">伊犁哈萨克</a>
+                    <a href="/air/yilihasakezhou/">伊犁哈萨克州</a>
+                </div>
+                <div class="citynum">Z.</div>
+                <div class="citynames">
+                    <a href="/air/zhuhai/">珠海</a>
+                    <a href="/air/zhangjiagang/">张家港</a>
+                    <a href="/air/zhangjiajie/">张家界</a>
+                    <a href="/air/zhangjiakou/">张家口</a>
+                    <a href="/air/zhangqiu/">章丘</a>
+                    <a href="/air/zhangye/">张掖</a>
+                    <a href="/air/zhangzhou/">漳州</a>
+                    <a href="/air/zhanjiang/">湛江</a>
+                    <a href="/air/zhaoqing/">肇庆</a>
+                    <a href="/air/zhaotong/">昭通</a>
+                    <a href="/air/zhaoyuan/">招远</a>
+                    <a href="/air/zhengzhou/">郑州</a>
+                    <a href="/air/zhenjiang/">镇江</a>
+                    <a href="/air/zhongshan/">中山</a>
+                    <a href="/air/zhongwei/">中卫</a>
+                    <a href="/air/zhoukou/">周口</a>
+                    <a href="/air/zhoushan/">舟山</a>
+                    <a href="/air/zhuji/">诸暨</a>
+                    <a href="/air/zaozhuang/">枣庄</a>
+                    <a href="/air/zhumadian/">驻马店</a>
+                    <a href="/air/zhuzhou/">株洲</a>
+                    <a href="/air/zibo/">淄博</a>
+                    <a href="/air/zigong/">自贡</a>
+                    <a href="/air/ziyang/">资阳</a>
+                    <a href="/air/zunyi/">遵义</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 rightbar">
+            <div>
+                <!-- AirLevel_pc_index_right_side -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:300px;height:600px"
+                     data-ad-client="ca-pub-3496314023280857"
+                     data-ad-slot="2133025009"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div>
+                <h3 class="text-center">全国空气质量最差城市实时排名</h3>
+                <table class="table table-condensed text-center">
+                    <tr class="active">
+                        <th>排名</th>
+                        <th>城市</th>
+                        <th>AQI</th>
+                        <th>空气质量等级</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>                                <td><a href="/air/kashidiqu/" target="_blank">喀什地区</a></td>                            <td>231</td>
+                        <td><span class="aqi aqi-level-5">重度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>                                <td><a href="/air/wujiang/" target="_blank">吴江</a></td>                            <td>149</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>                                <td><a href="/air/rizhao/" target="_blank">日照</a></td>                            <td>148</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>                                <td><a href="/air/jining/" target="_blank">济宁</a></td>                            <td>146</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>                                <td><a href="/air/huzhou/" target="_blank">湖州</a></td>                            <td>142</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>                                <td><a href="/air/rushan/" target="_blank">乳山</a></td>                            <td>142</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>                                <td><a href="/air/linyi/" target="_blank">临沂</a></td>                            <td>141</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>                                <td><a href="/air/jintan/" target="_blank">金坛</a></td>                            <td>138</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>                                <td><a href="/air/dalian/" target="_blank">大连</a></td>                            <td>137</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>                                <td><a href="/air/rongcheng/" target="_blank">荣成</a></td>                            <td>137</td>
+                        <td><span class="aqi aqi-level-3">轻度污染</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h3 class="text-center">全国空气质量最佳城市实时排名</h3>
+                <table class="table table-condensed text-center">
+                    <tr class="active">
+                        <th>排名</th>
+                        <th>城市</th>
+                        <th>AQI</th>
+                        <th>空气质量等级</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>                                <td><a href="/air/alidiqu/" target="_blank">阿里地区</a></td>                            <td>9</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>                                <td><a href="/air/xilinguolemeng/" target="_blank">锡林郭勒盟</a></td>                            <td>11</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>                                <td><a href="/air/ganzizhou/" target="_blank">甘孜州</a></td>                            <td>11</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>                                <td><a href="/air/chuxiongzhou/" target="_blank">楚雄州</a></td>                            <td>12</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>                                <td><a href="/air/qianxinanzhou/" target="_blank">黔西南州</a></td>                            <td>12</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>                                <td><a href="/air/songyuan/" target="_blank">松原</a></td>                            <td>12</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>                                <td><a href="/air/sanya/" target="_blank">三亚</a></td>                            <td>13</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>                                <td><a href="/air/suihua/" target="_blank">绥化</a></td>                            <td>13</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>                                <td><a href="/air/aletaidiqu/" target="_blank">阿勒泰地区</a></td>                            <td>14</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>                                <td><a href="/air/lincang/" target="_blank">临沧</a></td>                            <td>14</td>
+                        <td><span class="aqi aqi-level-1">优</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <!-- AirLevel_pc_index_right_bottom -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:300px;height:600px"
+                     data-ad-client="ca-pub-3496314023280857"
+                     data-ad-slot="8830295295"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+    <footer>
+        <p>&copy;2019 - 全国空气质量指数 (Air Level) - 津ICP备14002980号-2</p>
+    </footer>
+</div>
+
+<div style="display: none">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1253541929'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D1253541929' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>
