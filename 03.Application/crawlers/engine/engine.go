@@ -8,9 +8,11 @@ import (
 
 func Run(seeds ...Request) {
 	var requests []Request
+	// 将种子页面传入
 	for _, r := range seeds {
 		requests = append(requests, r)
 	}
+	// 循环爬取和解析
 	for len(requests) > 0 {
 		r := requests[0]
 		requests = requests[1:]

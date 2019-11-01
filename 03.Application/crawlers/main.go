@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// 从初始页面开始爬取
 	engine.Run(engine.Request{
 		Url:        "http://air-level.com/",
 		ParserFunc: parser.CityList,

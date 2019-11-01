@@ -59,6 +59,7 @@ func CityAirInfo(contents []byte, cityname string) engine.ParseResult {
 	return result
 }
 
+// 城市空气质量等级结构化
 type CityAirLevel struct {
 	Addr  string `json:"addr"`
 	Aqi   string `json:"aqi"`
