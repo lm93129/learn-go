@@ -45,7 +45,7 @@ func GetCity() map[string]string {
 
 func GetAirLevel(m map[string]string) {
 	list := GetCity()
-	for a, _ := range list {
+	for a := range list {
 		CityAir(a)
 	}
 }
