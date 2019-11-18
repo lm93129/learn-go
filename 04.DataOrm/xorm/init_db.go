@@ -5,7 +5,6 @@ import (
 	"github.com/go-xorm/xorm"
 	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
-	"xorm.io/core"
 )
 
 var engine *xorm.Engine
@@ -26,8 +25,7 @@ func Database() {
 	engine.SetMaxIdleConns(5)
 	//设置最大打开连接数
 	engine.SetMaxOpenConns(5)
-	//名称映射规则主要负责结构体名称到表名和结构体field到表字段的名称映射
-	engine.SetTableMapper(core.SnakeMapper{})
+
 	// 将执行的sql语句打印出来
 	engine.ShowSQL(true)
 
