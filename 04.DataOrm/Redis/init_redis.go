@@ -1,6 +1,7 @@
 package model
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -27,4 +28,30 @@ func Redis() {
 	}
 
 	RedisClient = client
+}
+
+func RedisPing() {
+	pong, err := RedisClient.Ping().Result()
+	fmt.Println(pong, err)
+}
+
+func Example() {
+	// 设置键值
+	err := RedisClient.Set("key", "value", 0).Err()
+	if err != nil {
+		log.Panicln(err)
+	}
+
+	// 获取KEY的值
+	val, err := RedisClient.Get("key").Result()
+	fmt.Println(val, err)
+
+	val2, err := RedisClient.Get("key2").Result()
+	if err == redis.Nil {
+		fmt.Println("key2 does not exist")
+	} else if err != nil {
+		panic(err)
+	} else {
+		fmt.Println("key2", val2)
+	}
 }

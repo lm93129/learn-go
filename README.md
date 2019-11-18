@@ -1,3 +1,8 @@
+## Go modules
+使用go modules的go程序，会在目录下有一个go.mod和go.sum的文件。
+mod这个文件是记录使用了哪些依赖包，sum这个文件是记录依赖包的校验码。
+程序下载好之后，可以直接使用go build或者go run来启动程序。此时程序会自动安装mod中的信息下载依赖包
+这里推荐设置下下载依赖的代理为goproxy.cn。具体设置方法可以谷歌下。
 # 一、go语言学习入门
 ## 1. 基本语法
 ### 1.0 HelloWorld
