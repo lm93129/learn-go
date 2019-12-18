@@ -9,8 +9,8 @@ import (
 )
 
 type LoginForm struct {
-	User     string `form:"user" binding:"required"`
-	Password string `form:"password" binding:"required"`
+	User     string `form:"user" json:"user" binding:"required"`
+	Password string `form:"password" json:"password" binding:"required"`
 }
 
 func main() {
