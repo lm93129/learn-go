@@ -18,4 +18,5 @@ require (
 	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect
 	github.com/xdg/stringprep v1.0.0 // indirect
 	go.mongodb.org/mongo-driver v1.2.0
+	xorm.io/core v0.7.2-0.20190928055935-90aeac8d08eb
 )

@@ -1,10 +1,13 @@
 package xorm
 
+// 根据需求可以删减掉对应数据库支持的包
 import (
+	"fmt"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
-	_ "github.com/lib/pq"
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/lib/pq"           // 支持pg数据库
+	_ "github.com/mattn/go-sqlite3" // 支持sqlite3数据库
 )
 
 var engine *xorm.Engine
@@ -21,6 +24,22 @@ func Database() {
 	}
 	// 初始化sqlite3数据库
 	// engine, err = xorm.NewEngine("sqlite3", "./test.db")
+	// 初始化pg数据库
+	// psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",host,port,user,password,dbName)
+	// engine, err := xorm.NewEngine("postgres", psqlInfo)
+	err = engine.Ping()
+
+	// 验证数据库连接
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Connect successfully!")
+	// pg数据库设定
+	// SetMapper用于设置结构体与数据库表结构的映射模式。
+	// engine.SetMapper(core.GonicMapper{})
+	// SetSchema用于设置默认使用的schema。
+	// engine.SetSchema("PgSchema")
 	//设置连接池的空闲数大小
 	engine.SetMaxIdleConns(5)
 	//设置最大打开连接数
