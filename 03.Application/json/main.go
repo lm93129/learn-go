@@ -90,7 +90,7 @@ func main() {
 	// 访问数据时的类型断言。
 	str := `{"page": 1, "fruits": ["apple", "peach"]}`
 	res := &Response2{}
-	json.Unmarshal([]byte(str), &res)
+	_ = json.Unmarshal([]byte(str), &res)
 	fmt.Println(res)
 	fmt.Println(res.Fruits[0])
 
